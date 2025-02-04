@@ -1,16 +1,16 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import path from "path"
 
-module.exports = {
+export default {
   entry: './src/index.js',  // entry point for the app
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve('dist'),
     filename: 'bundle.js',  // output bundle
   },
   module: {
     rules: [
       {
-        test: /\.js$/,  // transpile JS files
+        test: /\.jsx?$/, // Matches .js and .jsx files
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -23,7 +23,7 @@ module.exports = {
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve('dist'),
     },
     hot: true,  // enable hot reloading
     port: 3000,

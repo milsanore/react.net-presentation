@@ -1,7 +1,7 @@
 import React from 'react';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
-import App from "./App"
+import App from "./App.jsx"
 
 // Render the React component to the DOM
 const rootElement = document.getElementById('root');

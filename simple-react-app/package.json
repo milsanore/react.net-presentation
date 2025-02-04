@@ -1,6 +1,7 @@
 {
   "name": "simple-react-app",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
